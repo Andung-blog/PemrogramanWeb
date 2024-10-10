@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navigation */
+header {
+  background-color: white;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0.2px 0.3px black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 15px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: white;
+  border: 2px solid black;
+  background-color: black;
+  border-radius: 20px;
+}
+
+.contact-btn {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Hero Section */
+.hero {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.image-cover {
+  filter: brightness(50%);
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.hero-text {
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 108px;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 50px;
+}
+
+/* Products Section */
+.products {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 20px 20px;
+}
+
+.products-content {
+  width: 50%;
+}
+
+.products-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.products-content p {
+  font-size: 18px;
+  text-align: justify;
+  color: #666;
+}
+
+.products-menu {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-item {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.transit-options button {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  padding: 20px 10px;
+  border: transparent;
+  box-shadow: 0.1px 0.3px black;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.transit-options button:hover {
+  color: white;
+  border: 2px solid black;
+  background-color: black;
+}
+
+/* Highlights */
+.highlights {
+  margin: 20px 20;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.image-highlights {
+  filter: brightness(50%);
+}
+
+.highlights img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.highlights-content {
+  margin: 20px 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0.2px 0.3px black;
+}
+
+.highlights-text {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.highlights-text h2 {
+  margin: 50px;
+}
+
+.highlights-text p {
+  margin: 0;
+  flex: 1;
+  text-align: justify;
+}
+
+/* Footer */
+footer {
+  background-color: white;
+  margin: 20px 20px;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.column {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.column h4 {
+  margin-bottom: 20px;
+}
+
+.column ul {
+  list-style: none;
+}
+
+.column ul li {
+  margin-bottom: 10px;
+}
+
+.connect form {
+  display: flex;
+  align-items: center;
+}
+
+.connect input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.connect button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.connect button:hover {
+  background-color: white;
+  color: black;
+  border: 0.5px solid black;
+}
+
+/* Responsive*/
+@media screen and (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+  }
+
+  .products {
+    flex-direction: column;
+  }
+
+  .products-content,
+  .products-menu {
+    width: 100%;
+  }
+
+  .footer-menu {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
