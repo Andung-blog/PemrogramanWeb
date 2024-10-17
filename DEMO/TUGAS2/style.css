@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  font-family: "Poppins", sans-serif;
+}
+
+.todo-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  width: 400px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.todo-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 20px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  transition: background-color 0.3s ease;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+input[type="text"]:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+button {
+  padding: 12px 25px;
+  background-color: #764ba2;
+  border: none;
+  color: white;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #667eea;
+  transform: translateY(-2px);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+li:hover {
+  transform: translateX(5px);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+li input {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  width: 80%;
+  color: #fff;
+  outline: none;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+li input:focus {
+  background-color: transparent;
+  outline: none;
+}
+
+li button {
+  padding: 8px 12px;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+li button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Delete */
+li .delete-btn {
+  background-color: #ff6b6b;
+  background-image: linear-gradient(135deg, #ff6b6b, #ff4757);
+}
+
+li .delete-btn:hover {
+  background-color: #ff4757;
+  background-image: linear-gradient(135deg, #ff4757, #ff6b6b);
+  transform: translateY(-2px) scale(1.1);
+}
+
+/* Button Edit */
+li .edit-btn {
+  background-color: #feca57;
+  background-image: linear-gradient(135deg, #feca57, #ff9f43);
+}
+
+li .edit-btn:hover {
+  background-color: #ff9f43;
+  background-image: linear-gradient(135deg, #ff9f43, #feca57);
+  transform: translateY(-2px) scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .todo-container {
+    width: 90%;
+  }
+
+  input[type="text"] {
+    padding: 10px;
+  }
+
+  button {
+    padding: 10px 20px;
+  }
+
+  li {
+    padding: 10px;
+  }
+}
