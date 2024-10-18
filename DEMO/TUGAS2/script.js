@@ -5,7 +5,7 @@ function addTodo() {
   const task = todoInput.value.trim();
 
   if (task === "") {
-    alert("Please enter a task");
+    alert("Masukkan Task Dahulu");
     return;
   }
 

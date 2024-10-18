@@ -9,33 +9,22 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  font-family: "Poppins", sans-serif;
+  background-color: #f8f9fa;
+  font-family: "Arial", sans-serif;
 }
 
 .todo-container {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 30px;
-  width: 400px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 350px;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.todo-container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
-  font-size: 2rem;
-  color: #fff;
   margin-bottom: 20px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  color: #343a40;
 }
 
 .input-container {
@@ -46,39 +35,23 @@ h2 {
 
 input[type="text"] {
   flex: 1;
-  padding: 12px;
-  border-radius: 25px;
-  border: none;
-  outline: none;
-  font-size: 1rem;
-  background-color: rgba(255, 255, 255, 0.3);
-  color: #fff;
-  transition: background-color 0.3s ease;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-input[type="text"]::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-input[type="text"]:focus {
-  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
 }
 
 button {
-  padding: 12px 25px;
-  background-color: #764ba2;
+  padding: 10px 20px;
+  background-color: #8f12c9;
   border: none;
   color: white;
-  border-radius: 25px;
-  font-size: 1rem;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #667eea;
-  transform: translateY(-2px);
+  background-color: #ae49dd;
 }
 
 ul {
@@ -90,74 +63,32 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.3);
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-li:hover {
-  transform: translateX(5px);
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: #e9ecef;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 li input {
   border: none;
-  background-color: transparent;
+  background-color: #e9ecef;
   font-size: 1rem;
-  width: 80%;
-  color: #fff;
-  outline: none;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-li input:focus {
-  background-color: transparent;
-  outline: none;
+  width: 100%;
 }
 
 li button {
-  padding: 8px 12px;
-  border: none;
+  background-color: #dc3545;
   color: white;
-  border-radius: 10px;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 5px;
+  margin-right: 5px;
+  margin-left: 10px;
 }
 
 li button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Button Delete */
-li .delete-btn {
-  background-color: #ff6b6b;
-  background-image: linear-gradient(135deg, #ff6b6b, #ff4757);
-}
-
-li .delete-btn:hover {
-  background-color: #ff4757;
-  background-image: linear-gradient(135deg, #ff4757, #ff6b6b);
-  transform: translateY(-2px) scale(1.1);
-}
-
-/* Button Edit */
-li .edit-btn {
-  background-color: #feca57;
-  background-image: linear-gradient(135deg, #feca57, #ff9f43);
-}
-
-li .edit-btn:hover {
-  background-color: #ff9f43;
-  background-image: linear-gradient(135deg, #ff9f43, #feca57);
-  transform: translateY(-2px) scale(1.1);
+  background-color: #c82333;
 }
 
 @media (max-width: 768px) {
@@ -166,14 +97,10 @@ li .edit-btn:hover {
   }
 
   input[type="text"] {
-    padding: 10px;
+    padding: 8px;
   }
 
   button {
-    padding: 10px 20px;
-  }
-
-  li {
-    padding: 10px;
+    padding: 8px 16px;
   }
 }
